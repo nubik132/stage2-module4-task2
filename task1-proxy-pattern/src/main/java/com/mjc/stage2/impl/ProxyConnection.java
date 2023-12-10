@@ -17,7 +17,7 @@ public class ProxyConnection implements Connection {
     @Override
     public void close() {
         ConnectionPool pool = ConnectionPool.getInstance();
-        pool.releaseConnection(realConnection);
+        pool.releaseConnection(this);
     }
 
     @Override
